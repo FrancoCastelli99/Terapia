@@ -9,33 +9,16 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/auth.css') }}" rel="stylesheet">
-       <!-- Additional CSS Files -->
-       <link rel="stylesheet" type="text/css" href="{{asset('/css/bootstrap.min.css')}}">
-
-       <link rel="stylesheet" type="text/css" href="{{asset('/css/font-awesome.css')}}">
-
-       <link rel="stylesheet" href="{{asset('/css/templatemo-hexashop.css')}}">
-
-       <link rel="stylesheet" href="{{asset('/css/owl-carousel.css')}}">
-
-       <link rel="stylesheet" href="{{asset('/css/lightbox.css')}}">
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>         
+    <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-@extends('template.navbar')
 <body>
     <div id="app">
-        {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -87,7 +70,7 @@
                     </ul>
                 </div>
             </div>
-        </nav> --}}
+        </nav>
 
         <main class="py-4">
             @yield('content')
